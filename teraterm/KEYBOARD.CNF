@@ -149,7 +149,9 @@ EditCopy=1362
 ; Shift + Insert
 ;EditPaste=850
 ; Alt + V
-EditPaste=2095
+;EditPaste=2095
+; Ctrl + V
+EditPaste=1071
 EditPasteCR=off
 EditCLS=off
 EditCLB=off
@@ -160,37 +162,27 @@ LineUp=1352
 ; Ctrl + down-arrow
 LineDown=1360
 ; Ctrl + PageUp
-;PageUp=1353
+PageUp=1353
 ; Ctrl + PageDown
-;PageDown=1361
+PageDown=1361
 ; Ctrl + Home
 BuffTop=1351
 ; Ctrl + End
 BuffBottom=1359
 ; Ctrl + Tab
 ;NextWin=1039
-;NextShownWin=off
+NextShownWin=off
 ; Ctrl + Shift + Tab
 ;PrevWin=1551
-;PrevShownWin=off
-;LocalEcho=off
+PrevShownWin=off
+LocalEcho=off
 ; ScrollLock
 ScrollLock=70
 
 ;Example of user key definitions.
-[User keys]
-;   Alt + N key: New connection
-;User1=2097,3,50110
-;   Alt + Shift + N key: Duplicate session
-;User2=2609,3,50111
-;   Shift + Tab
-;User3=527,0,$1B[Z
-;   Ctrl + Tab
-User1=1039,0,$1B[27;5;9~
-;   Shift + Ctrl + Tab
-User2=1551,0,$1B[27;6;9~
+;[User keys]
 ;	Ctrl + F1 key: character string
-;User3=1083,0,telnet myhost
+;User1=1083,0,telnet myhost
 ;
 ;	Ctrl + F2 key: control characters
 ;User2=1084,0,$0D$0A
@@ -204,3 +196,34 @@ User2=1551,0,$1B[27;6;9~
 ;	Ctrl + F5 key: Executing a menu command
 ;User5=1087,3,50110
 [User keys]
+;   Alt + Shift + N key: New connection
+User1=2609,3,50110
+;   Alt + Shift + D key: Duplicate session
+User2=2592,3,50111
+
+; 特殊なキーの組み合わせに対するエスケープシーケンスの設定
+; 参照:http://sanrinsha.lolipop.jp/blog/2012/07/%E3%82%BF%E3%83%BC%E3%83%9F%E3%83%8A%E3%83%AB%E3%81%A7ctrltab%E3%81%A8%E3%81%8B%E3%82%92%E4%BD%BF%E3%81%86.html
+;   Ctrl + Tab
+User3=1039,0,$1B[27;5;9~
+;   Shift + Ctrl + Tab
+User4=1551,0,$1B[27;6;9~
+;   Ctrl + 1
+User5=1026,0,$1B[27;5;49~
+;   Ctrl + 2
+User6=1027,0,$1B[27;5;50~
+;   Ctrl + 3
+User7=1028,0,$1B[27;5;51~
+;   Ctrl + 4
+User8=1029,0,$1B[27;5;52~
+;   Ctrl + 5
+;User9=1030,0,$1B[27;5;53~
+;;   Ctrl + 6
+;User10=1031,0,$1B[27;5;54~
+;;   Ctrl + 7
+;User11=1032,0,$1B[27;5;55~
+;;   Ctrl + 8
+;User12=1033,0,$1B[27;5;56~
+;;   Ctrl + 9
+;User13=1034,0,$1B[27;5;57~
+;;   Ctrl + 0
+;User14=1035,0,$1B[27;5;48~
