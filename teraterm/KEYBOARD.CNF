@@ -149,9 +149,9 @@ EditCopy=1362
 ; Shift + Insert
 ;EditPaste=850
 ; Alt + V
-;EditPaste=2095
+EditPaste=2095
 ; Ctrl + V
-EditPaste=1071
+;EditPaste=1071
 EditPasteCR=off
 EditCLS=off
 EditCLB=off
