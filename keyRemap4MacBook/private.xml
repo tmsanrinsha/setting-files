@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<root>
+ <item>
+        <name>Underscore(Ro) to Backslash(\) (if no modifiers pressed)</name>
+        <identifier>remap.jis_underscore2backslash_nomods</identifier>
+        <autogen>--KeyToKey-- KeyCode::JIS_UNDERSCORE, ModifierFlag::NONE, KeyCode::VK_JIS_BACKSLASH</autogen>
+</item>
+</root>
