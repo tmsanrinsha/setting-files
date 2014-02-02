@@ -1,8 +1,47 @@
 <?xml version="1.0"?>
 <root>
- <item>
-        <name>Underscore(Ro) to Backslash(\) (if no modifiers pressed)</name>
-        <identifier>remap.jis_underscore2backslash_nomods</identifier>
-        <autogen>--KeyToKey-- KeyCode::JIS_UNDERSCORE, ModifierFlag::NONE, KeyCode::VK_JIS_BACKSLASH</autogen>
-</item>
+    <!-- /Applications/KeyRemap4MacBook.app/Contents/Resources/replacementdef.xml の定義の上書き -->
+    <replacementdef>
+        <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
+        <replacementvalue>
+            ECLIPSE,
+            EMACS,
+            REMOTEDESKTOPCONNECTION,
+            TERMINAL,
+            VI,
+            VIRTUALMACHINE,
+            X11,
+            FIREFOX,
+            GOOGLE_CHROME
+        </replacementvalue>
+    </replacementdef>
+    <item>
+        <name>My Setting</name>
+        <item>
+            <name>Enter to Option_R</name>
+            <appendix>(+ When you type Enter only, send Enter)</appendix>
+            <identifier>remap.enter2optionL_enter</identifier>
+            <autogen>__KeyOverlaidModifier__ KeyCode::RETURN,
+                KeyCode::OPTION_L,
+                KeyCode::RETURN</autogen>
+        </item>
+        <item>
+            <name>Control_L to Control_L</name>
+            <appendix>(+ When you type Control_L only, send EISUU+Escape)</appendix>
+            <identifier>remap.cntrolL2controlL_eisuuAndEscape</identifier>
+            <only>TERMINAL</only>
+            <inputsource_only>JAPANESE</inputsource_only>
+            <autogen>__KeyOverlaidModifier__ KeyCode::CONTROL_L,
+                KeyCode::CONTROL_L,
+                KeyCode::JIS_EISUU, KeyCode::ESCAPE</autogen>
+        </item>
+        <item>
+            <name>Control_L to Control_L</name>
+            <appendix>(+ When you type Control_L only, send Escape)</appendix>
+            <identifier>remap.cntrolL2controlL_Escape</identifier>
+            <autogen>__KeyOverlaidModifier__ KeyCode::CONTROL_L,
+                KeyCode::CONTROL_L,
+                KeyCode::ESCAPE</autogen>
+        </item>
+    </item>
 </root>
