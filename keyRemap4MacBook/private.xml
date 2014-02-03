@@ -43,5 +43,37 @@
                 KeyCode::CONTROL_L,
                 KeyCode::ESCAPE</autogen>
         </item>
+        <item>
+            <name>Control+[ to Escape+EISUU</name>
+            <identifier>myremap.cotrolLeftbracket2EscapeAndEisuu</identifier>
+            <autogen>__KeyToKey__
+                KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+                KeyCode::JIS_EISUU, KeyCode::ESCAPE</autogen>
+        </item>
+        <item>
+            <name>Control+M to Return</name>
+            <identifier>myremap.cotrolM2Return</identifier>
+            <autogen>__KeyToKey__
+                KeyCode::M, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+                KeyCode::RETURN</autogen>
+        </item>
+        <item>
+            <name>Change Command_R to Option_R</name>
+            <appendix>(+ When you type Command_R only, send Kana)</appendix>
+            <identifier>myremap.commandR2OptionR_Kana</identifier>
+            <autogen>__KeyOverlaidModifier__
+                KeyCode::COMMAND_R,
+                KeyCode::OPTION_R,
+                KeyCode::JIS_EISUU
+            </autogen>
+        </item>
+        <item>
+            <name>Command_L to Command_L</name>
+            <appendix>(+ When you type Command_R+Command_L only, toggle Complete Vi Mode)</appendix>
+            <appendix>(+ When you type Command_L only, send EISUU)</appendix>
+            <identifier>myremap.commandL2commandL_vimode_eisuuu</identifier>
+            <autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_L, ModifierFlag::OPTION_R, KeyCode::VK_CONFIG_TOGGLE_notsave_complete_vimode</autogen>
+            <autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_L, KeyCode::COMMAND_L, KeyCode::JIS_KANA</autogen>
+        </item>
     </item>
 </root>
