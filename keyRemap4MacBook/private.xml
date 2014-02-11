@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <root>
+    <appdef>
+        <appname>VMWARE_FUSION</appname>
+        <equal>com.vmware.fusion</equal>
+    </appdef>
     <!-- /Applications/KeyRemap4MacBook.app/Contents/Resources/replacementdef.xml の定義の上書き -->
     <replacementdef>
         <replacementname>EMACS_MODE_IGNORE_APPS</replacementname>
@@ -10,6 +14,7 @@
             TERMINAL,
             VI,
             VIRTUALMACHINE,
+            VMWARE_FUSION,
             X11,
             FIREFOX,
             GOOGLE_CHROME
@@ -17,6 +22,39 @@
     </replacementdef>
     <item>
         <name>My Setting</name>
+        <item>
+            <name>Control+[ to Escape+EISUU</name>
+            <not>VMWARE_FUSION</not>
+            <identifier>myremap.cotrolLeftbracket2EscapeAndEisuu</identifier>
+            <autogen>__KeyToKey__
+                KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+                KeyCode::JIS_EISUU, KeyCode::ESCAPE</autogen>
+        </item>
+        <item>
+            <name>Control+[ to Escape</name>
+            <only>VMWARE_FUSION</only>
+            <identifier>myremap.cotrolLeftbracket2Escape</identifier>
+            <autogen>__KeyToKey__
+                KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+                KeyCode::ESCAPE</autogen>
+        </item>
+        <item>
+            <name>Control+M to Return</name>
+            <identifier>myremap.cotrolM2Return</identifier>
+            <autogen>__KeyToKey__
+                KeyCode::M, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+                KeyCode::RETURN</autogen>
+        </item>
+        <item>
+            <name>Change Command_R to Option_R</name>
+            <appendix>(+ When you type Command_R only, toggle IM)</appendix>
+            <identifier>myremap.commandR2OptionR_toggleIM</identifier>
+            <autogen>__KeyOverlaidModifier__
+                KeyCode::COMMAND_R,
+                KeyCode::OPTION_R,
+                KeyCode::SPACE, ModifierFlag::COMMAND_L
+            </autogen>
+        </item>
         <item>
             <name>Enter to Option_R</name>
             <appendix>(+ When you type Enter only, send Enter)</appendix>
@@ -42,30 +80,6 @@
             <autogen>__KeyOverlaidModifier__ KeyCode::CONTROL_L,
                 KeyCode::CONTROL_L,
                 KeyCode::ESCAPE</autogen>
-        </item>
-        <item>
-            <name>Control+[ to Escape+EISUU</name>
-            <identifier>myremap.cotrolLeftbracket2EscapeAndEisuu</identifier>
-            <autogen>__KeyToKey__
-                KeyCode::BRACKET_LEFT, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
-                KeyCode::JIS_EISUU, KeyCode::ESCAPE</autogen>
-        </item>
-        <item>
-            <name>Control+M to Return</name>
-            <identifier>myremap.cotrolM2Return</identifier>
-            <autogen>__KeyToKey__
-                KeyCode::M, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
-                KeyCode::RETURN</autogen>
-        </item>
-        <item>
-            <name>Change Command_R to Option_R</name>
-            <appendix>(+ When you type Command_R only, toggle IM)</appendix>
-            <identifier>myremap.commandR2OptionR_toggleIM</identifier>
-            <autogen>__KeyOverlaidModifier__
-                KeyCode::COMMAND_R,
-                KeyCode::OPTION_R,
-                KeyCode::SPACE, ModifierFlag::COMMAND_L
-            </autogen>
         </item>
         <item>
             <name>Command_L to Command_L</name>
