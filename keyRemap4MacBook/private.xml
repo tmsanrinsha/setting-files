@@ -79,6 +79,14 @@
             </autogen>
         </item>
         <item>
+            <name>Command_L to Command_L</name>
+            <appendix>(+ When you type Option_R+Command_L only, toggle Complete Vi Mode)</appendix>
+            <identifier>myremap.commandL2commandL_vimode</identifier>
+            <autogen>__KeyOverlaidModifier__
+                KeyCode::COMMAND_L, ModifierFlag::OPTION_R,
+                KeyCode::VK_CONFIG_TOGGLE_notsave_complete_vimode</autogen>
+        </item>
+        <item>
             <name>Change Command_R to Option_R</name>
             <appendix>(+ When you type Command_R only, toggle IM)</appendix>
             <identifier>myremap.commandR2OptionR_toggleIM</identifier>
